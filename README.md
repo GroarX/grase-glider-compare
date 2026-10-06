@@ -1,0 +1,44 @@
+# grase-glider-compare
+
+Compare GrASE/NoGrASE hindcasts or forecasts, or reference products such as ESPC and GLORYS, with one or more glider missions. Outputs include matched caches and 300-dpi T–S diagrams, profiles with standard deviations, sections, differences, histograms and vertical NRMSD.
+
+## Install
+
+Python 3.11 or newer:
+
+```bash
+python -m pip install .
+```
+
+## Run
+
+Edit file paths and variable names in `configs/model_pair.example.json`, then:
+
+```bash
+grase-glider-compare run --config configs/model_pair.example.json --output results/my_comparison
+```
+
+The equivalent Python command is `python -m grase_glider_compare run ...`.
+
+| Input | Configuration |
+|---|---|
+| GrASE/NoGrASE hindcast or forecast with valid UTC | `configs/model_pair.example.json` |
+| Forecast initialization + lead time | `configs/forecast_pair.example.json` |
+| ESPC/GLORYS as standalone references | `configs/external_models.example.json` |
+| Four model pairs and multiple mission groups | `configs/four_models.example.json` |
+
+Model inputs require temperature in °C, practical salinity, physical depth in metres, a separable latitude/longitude grid and valid UTC. Select `potential_0dbar` or `in_situ` to match the temperature definition. Glider inputs are `*_original_resolution.nc` or `*_6hrstats.nc`. Paths are relative to the configuration file. See [input details](docs/inputs.md).
+
+## Complete example
+
+[HYCOM versus all four Yucatan-side missions](examples/hycom_yucatan/) includes the configuration and every figure from a real GrASE/NoGrASE comparison.
+
+```bash
+grase-glider-compare run --config examples/hycom_yucatan/config.json --output results/hycom_yucatan
+```
+
+Supply the same model and glider files to reproduce it. Input data and numerical caches are not included.
+
+For an existing run, replace `run` with `plot` to redraw its figures. Use a new output folder when inputs or scientific settings change.
+
+Differences are model minus glider. Density is σ₀. Group statistics pool paired samples. See [METHODS.md](METHODS.md) for definitions and [README.txt](README.txt) for plain-text instructions.
