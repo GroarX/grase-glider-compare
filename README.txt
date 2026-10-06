@@ -1,8 +1,8 @@
 grase-glider-compare
 
-Compare supplied model outputs with one or more glider missions. Supports
-GrASE/NoGrASE pairs and ESPC/GLORYS reference products. Produces matched
-caches and 300-dpi figures.
+Compare model outputs with one or more glider missions, including GrASE/NoGrASE
+pairs, ESPC and GLORYS. Generates T-S diagrams, profile and section comparisons,
+difference plots, histograms and vertical NRMSD plots.
 
 INSTALL (Python 3.11+)
     python -m pip install .

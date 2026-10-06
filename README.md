@@ -1,6 +1,6 @@
 # grase-glider-compare
 
-Compare supplied model outputs with one or more glider missions. Supports GrASE/NoGrASE pairs and reference products such as ESPC and GLORYS. Outputs include matched caches and 300-dpi T–S diagrams, profiles with standard deviations, sections, differences, histograms and vertical NRMSD.
+Compare model outputs with one or more glider missions, including GrASE/NoGrASE pairs, ESPC and GLORYS. Generates T–S diagrams, profile and section comparisons, difference plots, histograms and vertical NRMSD plots.
 
 ## Install
 
