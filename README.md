@@ -39,7 +39,7 @@ grase-glider-compare run --config examples/hycom_yucatan/config.json --output re
 
 All supplied comparison results use `*_original_resolution.nc` glider observations, averaged into six-hour windows and model depth bins by this package. They do not use the existing `*_6hrstats.nc` means.
 
-[Data share](https://drive.google.com/drive/folders/1MJ9wrgEqYmXIEWtJ25PRUQ3-RaIrC-T9?usp=drive_link). Supply the same model and glider files and update their paths to reproduce the example. Data and numerical caches are not included in this repository.
+Supply the same model and glider files and update their paths to reproduce the example. Data and numerical caches are not included in this repository.
 
 For an existing run, replace `run` with `plot` to redraw its figures. Use a new output folder when inputs or scientific settings change.
 

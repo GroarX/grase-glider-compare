@@ -39,8 +39,6 @@ examples/hycom_yucatan/figures/. All supplied comparison results use
 *_original_resolution.nc, averaged here into six-hour windows and model depth
 bins, rather than the existing *_6hrstats.nc means.
 
-Shared input data:
-https://drive.google.com/drive/folders/1MJ9wrgEqYmXIEWtJ25PRUQ3-RaIrC-T9?usp=drive_link
 Input data and numerical caches are not included in this repository.
 
 OUTPUTS

@@ -15,7 +15,7 @@ From the repository root, edit input paths in `config.json` and run:
 grase-glider-compare run --config examples/hycom_yucatan/config.json --output results/hycom_yucatan
 ```
 
-The configured `../../data/` paths resolve to the repository's `data/` folder. [Data share](https://drive.google.com/drive/folders/1MJ9wrgEqYmXIEWtJ25PRUQ3-RaIrC-T9?usp=drive_link). Update paths to your copies of the same model and glider files to reproduce the figures. Large input files and numerical caches are not included.
+The configured `../../data/` paths resolve to the repository's `data/` folder. Update paths to your copies of the same model and glider files to reproduce the figures. Large input files and numerical caches are not included.
 
 Differences are model minus glider. Profile shading is mean ± 1 standard deviation. Density is σ₀. The min–max NRMSD bounds are calculated from these eight HYCOM–Yucatan comparisons only.
 
