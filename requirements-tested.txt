@@ -1,0 +1,11 @@
+# Versions used for the HYCOM–Yucatan example. Python 3.11.
+numpy==2.4.5
+scipy==1.17.1
+pandas==3.0.3
+xarray==2026.4.0
+netCDF4==1.7.4
+dask==2026.3.0
+matplotlib==3.10.9
+cmocean==4.0.3
+gsw==3.6.22
+Pillow==12.2.0

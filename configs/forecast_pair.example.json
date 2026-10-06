@@ -1,0 +1,61 @@
+{
+  "models": [
+    {
+      "id": "FORECAST_nograce",
+      "family": "FORECAST",
+      "variant": "nograce",
+      "paths": "../data/forecast_nograce.nc",
+      "variables": {
+        "time": "valid_time",
+        "depth": "depth",
+        "lat": "lat",
+        "lon": "lon",
+        "temp": "temperature",
+        "salt": "salinity"
+      },
+      "temperature_kind": "potential_0dbar",
+      "forecast": {
+        "initialization_utc": "2025-08-01T00:00:00",
+        "init_coordinate": "forecast_reference_time",
+        "lead_coordinate": "lead",
+        "lead_units": "hours",
+        "concat_dim": "lead"
+      }
+    },
+    {
+      "id": "FORECAST_grace",
+      "family": "FORECAST",
+      "variant": "grace",
+      "paths": "../data/forecast_grace.nc",
+      "variables": {
+        "time": "valid_time",
+        "depth": "depth",
+        "lat": "lat",
+        "lon": "lon",
+        "temp": "temperature",
+        "salt": "salinity"
+      },
+      "temperature_kind": "potential_0dbar",
+      "forecast": {
+        "initialization_utc": "2025-08-01T00:00:00",
+        "init_coordinate": "forecast_reference_time",
+        "lead_coordinate": "lead",
+        "lead_units": "hours",
+        "concat_dim": "lead"
+      }
+    }
+  ],
+  "missions": [
+    {
+      "id": "example_mission",
+      "kind": "original",
+      "paths": "../data/example_mission_original_resolution.nc"
+    }
+  ],
+  "groups": {},
+  "settings": {
+    "sampling": "linear",
+    "stats_policy": "raw_companion",
+    "max_time_gap_hours": 12
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "models": [
+    {
+      "id": "HYCOM-FSU_nograce",
+      "family": "HYCOM-FSU",
+      "variant": "nograce",
+      "paths": "../data/HYCOM-FSU_nograce.nc",
+      "variables": {
+        "time": "time",
+        "depth": "depth",
+        "lat": "lat",
+        "lon": "lon",
+        "temp": "temperature",
+        "salt": "salinity"
+      },
+      "temperature_kind": "potential_0dbar"
+    },
+    {
+      "id": "HYCOM-FSU_grace",
+      "family": "HYCOM-FSU",
+      "variant": "grace",
+      "paths": "../data/HYCOM-FSU_grace.nc",
+      "variables": {
+        "time": "time",
+        "depth": "depth",
+        "lat": "lat",
+        "lon": "lon",
+        "temp": "temperature",
+        "salt": "salinity"
+      },
+      "temperature_kind": "potential_0dbar"
+    },
+    {
+      "id": "ROMS-NCSU_nograce",
+      "family": "ROMS-NCSU",
+      "variant": "nograce",
+      "paths": "../data/ROMS-NCSU_nograce.nc",
+      "variables": {
+        "time": "time",
+        "depth": "depth",
+        "lat": "lat",
+        "lon": "lon",
+        "temp": "temperature",
+        "salt": "salinity"
+      },
+      "temperature_kind": "potential_0dbar"
+    },
+    {
+      "id": "ROMS-NCSU_grace",
+      "family": "ROMS-NCSU",
+      "variant": "grace",
+      "paths": "../data/ROMS-NCSU_grace.nc",
+      "variables": {
+        "time": "time",
+        "depth": "depth",
+        "lat": "lat",
+        "lon": "lon",
+        "temp": "temperature",
+        "salt": "salinity"
+      },
+      "temperature_kind": "potential_0dbar"
+    },
+    {
+      "id": "MITgcm-UCSD_nograce",
+      "family": "MITgcm-UCSD",
+      "variant": "nograce",
+      "paths": "../data/MITgcm-UCSD_nograce.nc",
+      "variables": {
+        "time": "time",
+        "depth": "depth",
+        "lat": "lat",
+        "lon": "lon",
+        "temp": "temperature",
+        "salt": "salinity"
+      },
+      "temperature_kind": "potential_0dbar"
+    },
+    {
+      "id": "MITgcm-UCSD_grace",
+      "family": "MITgcm-UCSD",
+      "variant": "grace",
+      "paths": "../data/MITgcm-UCSD_grace.nc",
+      "variables": {
+        "time": "time",
+        "depth": "depth",
+        "lat": "lat",
+        "lon": "lon",
+        "temp": "temperature",
+        "salt": "salinity"
+      },
+      "temperature_kind": "potential_0dbar"
+    },
+    {
+      "id": "ROMS-CICESE_nograce",
+      "family": "ROMS-CICESE",
+      "variant": "nograce",
+      "paths": "../data/ROMS-CICESE_nograce.nc",
+      "variables": {
+        "time": "time",
+        "depth": "depth",
+        "lat": "lat",
+        "lon": "lon",
+        "temp": "temperature",
+        "salt": "salinity"
+      },
+      "temperature_kind": "potential_0dbar"
+    },
+    {
+      "id": "ROMS-CICESE_grace",
+      "family": "ROMS-CICESE",
+      "variant": "grace",
+      "paths": "../data/ROMS-CICESE_grace.nc",
+      "variables": {
+        "time": "time",
+        "depth": "depth",
+        "lat": "lat",
+        "lon": "lon",
+        "temp": "temperature",
+        "salt": "salinity"
+      },
+      "temperature_kind": "potential_0dbar"
+    }
+  ],
+  "missions": [
+    {
+      "id": "mission_1",
+      "kind": "original",
+      "paths": "../data/mission_1_original_resolution.nc"
+    },
+    {
+      "id": "mission_2",
+      "kind": "original",
+      "paths": "../data/mission_2_original_resolution.nc"
+    },
+    {
+      "id": "mission_3",
+      "kind": "original",
+      "paths": "../data/mission_3_original_resolution.nc"
+    },
+    {
+      "id": "mission_4",
+      "kind": "original",
+      "paths": "../data/mission_4_original_resolution.nc"
+    },
+    {
+      "id": "mission_5",
+      "kind": "original",
+      "paths": "../data/mission_5_original_resolution.nc"
+    },
+    {
+      "id": "mission_6",
+      "kind": "original",
+      "paths": "../data/mission_6_original_resolution.nc"
+    },
+    {
+      "id": "mission_7",
+      "kind": "original",
+      "paths": "../data/mission_7_original_resolution.nc"
+    },
+    {
+      "id": "mission_8",
+      "kind": "original",
+      "paths": "../data/mission_8_original_resolution.nc"
+    }
+  ],
+  "groups": {
+    "gulf_side": [
+      "mission_1",
+      "mission_2",
+      "mission_3",
+      "mission_4"
+    ],
+    "yucatan_side": [
+      "mission_5",
+      "mission_6",
+      "mission_7",
+      "mission_8"
+    ],
+    "all_missions": [
+      "mission_1",
+      "mission_2",
+      "mission_3",
+      "mission_4",
+      "mission_5",
+      "mission_6",
+      "mission_7",
+      "mission_8"
+    ]
+  },
+  "settings": {
+    "sampling": "linear",
+    "stats_policy": "raw_companion",
+    "max_time_gap_hours": 48
+  }
+}

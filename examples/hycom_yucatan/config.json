@@ -1,0 +1,74 @@
+{
+  "models": [
+    {
+      "id": "HYCOM-FSU_nograce",
+      "family": "HYCOM-FSU",
+      "variant": "nograce",
+      "paths": "../../data/Hindcasts/HYCOM-FSU/FSU_NoGrASE/0??_archm.2025-??_3z/*.nc",
+      "variables": {
+        "time": "MT",
+        "depth": "Depth",
+        "lon": "Longitude",
+        "lat": "Latitude",
+        "temp": "pot_temp",
+        "salt": "salinity"
+      },
+      "temperature_kind": "potential_0dbar"
+    },
+    {
+      "id": "HYCOM-FSU_grace",
+      "family": "HYCOM-FSU",
+      "variant": "grace",
+      "paths": "../../data/Hindcasts/HYCOM-FSU/FSU_GrASE/0??_archm.2025-??_3z/*.nc",
+      "variables": {
+        "time": "MT",
+        "depth": "Depth",
+        "lon": "Longitude",
+        "lat": "Latitude",
+        "temp": "pot_temp",
+        "salt": "salinity"
+      },
+      "temperature_kind": "potential_0dbar"
+    }
+  ],
+  "missions": [
+    {
+      "id": "sg651_20250428",
+      "paths": "../../data/glider/gridded_gliders_qaqc/sg651_20250428_original_resolution.nc",
+      "kind": "original"
+    },
+    {
+      "id": "sg622_20250514",
+      "paths": "../../data/glider/gridded_gliders_qaqc/sg622_20250514_original_resolution.nc",
+      "kind": "original"
+    },
+    {
+      "id": "sg650_20250817",
+      "paths": "../../data/glider/gridded_gliders_qaqc/sg650_20250817_original_resolution.nc",
+      "kind": "original"
+    },
+    {
+      "id": "sg651_20250901",
+      "paths": "../../data/glider/gridded_gliders_qaqc/sg651_20250901_original_resolution.nc",
+      "kind": "original"
+    }
+  ],
+  "groups": {
+    "yucatan_side": [
+      "sg651_20250428",
+      "sg622_20250514",
+      "sg650_20250817",
+      "sg651_20250901"
+    ]
+  },
+  "settings": {
+    "window_hours": 6,
+    "min_depth_m": 10,
+    "max_depth_m": 1000,
+    "min_bin_count": 2,
+    "max_time_gap_hours": 48,
+    "sampling": "linear",
+    "stats_policy": "raw_companion",
+    "seed": 20261005
+  }
+}

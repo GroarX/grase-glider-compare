@@ -1,0 +1,57 @@
+{
+  "models": [
+    {
+      "id": "ESPC_reference",
+      "family": "ESPC",
+      "variant": "reference",
+      "paths": "../data/ESPC_TS_*.nc",
+      "variables": {
+        "time": "time",
+        "depth": "depth",
+        "lat": "lat",
+        "lon": "lon",
+        "temp": "water_temp",
+        "salt": "salinity"
+      },
+      "temperature_kind": "potential_0dbar"
+    },
+    {
+      "id": "GLORYS_reference",
+      "family": "GLORYS",
+      "variant": "reference",
+      "paths": "../data/GLORYS_TS_*.nc",
+      "variables": {
+        "time": "time",
+        "depth": "depth",
+        "lat": "latitude",
+        "lon": "longitude",
+        "temp": "thetao",
+        "salt": "so"
+      },
+      "temperature_kind": "potential_0dbar"
+    }
+  ],
+  "missions": [
+    {
+      "id": "mission_a",
+      "kind": "original",
+      "paths": "../data/mission_a_original_resolution.nc"
+    },
+    {
+      "id": "mission_b",
+      "kind": "original",
+      "paths": "../data/mission_b_original_resolution.nc"
+    }
+  ],
+  "groups": {
+    "combined": [
+      "mission_a",
+      "mission_b"
+    ]
+  },
+  "settings": {
+    "sampling": "linear",
+    "stats_policy": "raw_companion",
+    "max_time_gap_hours": 48
+  }
+}
