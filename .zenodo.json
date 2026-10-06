@@ -1,0 +1,27 @@
+{
+  "title": "grase-glider-compare",
+  "description": "Compare model outputs with one or more glider missions, including GrASE/NoGrASE pairs, ESPC and GLORYS. Generates T–S diagrams, profile and section comparisons, difference plots, histograms and vertical NRMSD plots.",
+  "version": "1.2.0",
+  "creators": [
+    {
+      "name": "Ge, Xiao"
+    }
+  ],
+  "license": "mit",
+  "upload_type": "software",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "physical oceanography",
+    "ocean models",
+    "glider observations",
+    "model evaluation"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/GroarX/grase-glider-compare",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ]
+}

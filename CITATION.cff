@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite this software when using it in your research."
+type: software
+title: grase-glider-compare
+abstract: "Compare model outputs with one or more glider missions, including GrASE/NoGrASE pairs, ESPC and GLORYS. Generates T–S diagrams, profile and section comparisons, difference plots, histograms and vertical NRMSD plots."
+authors:
+  - family-names: Ge
+    given-names: Xiao
+version: 1.2.0
+date-released: 2026-10-06
+license: MIT
+repository-code: "https://github.com/GroarX/grase-glider-compare"
+url: "https://github.com/GroarX/grase-glider-compare"
+keywords:
+  - physical oceanography
+  - ocean models
+  - glider observations
+  - model evaluation
