@@ -2,6 +2,8 @@
 
 ## Observation averaging and interpolation
 
+All supplied comparison results start from QC-processed `*_original_resolution.nc` glider observations, rather than the existing `*_6hrstats.nc` means. [Shared input data](https://drive.google.com/drive/folders/1MJ9wrgEqYmXIEWtJ25PRUQ3-RaIrC-T9?usp=drive_link).
+
 The default depth range is 10–1,000 m. Observation windows are centred on 00, 06, 12 and 18 UTC and include samples in [centre − 3 hours, centre + 3 hours). Each bin requires at least two jointly finite temperature–salinity samples.
 
 Depth bins use the model's positive depth centres from 1 to 1,000 m. Interior edges are adjacent-centre midpoints; the outer edges equal the first and last centres. Bins include their lower edge and exclude their upper edge. A bin centre can fall outside the observation depth range if part of its bin overlaps that range.
@@ -22,7 +24,7 @@ Each comparison requires finite temperature, salinity and σ₀ from both model 
 
 Mean profiles and errors require at least three pairs per depth. Shading represents ±1 population standard deviation (`ddof=0`), not a confidence interval. Multiple missions are pooled before statistics are calculated, with equal weight per paired time–depth cell. Mission IDs and original UTC are retained.
 
-Forecasts use valid UTC, calculated from initialization plus lead time or read directly from the input. Both variants must use the same initialization. Separate forecast cycles are not combined. Pooling across a mission does not control for forecast lead time.
+Model time is valid UTC, read directly from the input or optionally calculated from initialization plus lead time. When initialization is specified, both variants must use the same initialization and separate cycles are not combined. Pooling across a mission does not control for forecast lead time.
 
 ## Error metrics
 

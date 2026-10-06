@@ -1,7 +1,8 @@
 grase-glider-compare
 
-Compare GrASE/NoGrASE hindcasts or forecasts, or ESPC/GLORYS reference products,
-with one or more glider missions. Produces matched caches and 300-dpi figures.
+Compare supplied model outputs with one or more glider missions. Supports
+GrASE/NoGrASE pairs and ESPC/GLORYS reference products. Produces matched
+caches and 300-dpi figures.
 
 INSTALL (Python 3.11+)
     python -m pip install .
@@ -21,8 +22,8 @@ CONFIGURATIONS
 Paths are relative to the JSON file. Model fields require temperature in Celsius,
 practical salinity, physical depth in metres and a separable latitude/longitude
 grid. Set temperature_kind to potential_0dbar or in_situ. Merge separate temperature
-and salinity files before input. Forecast time must be valid UTC; compare the same
-initialization for GrASE and NoGrASE. See docs/inputs.md for details.
+and salinity files before input. Time must be valid UTC. If initialization is
+specified, use the same one for GrASE and NoGrASE. See docs/inputs.md.
 
 GLIDERS
 Use *_original_resolution.nc, or *_6hrstats.nc. Six-hour input defaults to exact
@@ -34,7 +35,13 @@ HYCOM GrASE/NoGrASE versus all four Yucatan-side missions:
     grase-glider-compare run --config examples/hycom_yucatan/config.json --output results/hycom_yucatan
 
 Edit paths to your copies of the same inputs. All example figures are under
-examples/hycom_yucatan/figures/. Input data and numerical caches are not included.
+examples/hycom_yucatan/figures/. All supplied comparison results use
+*_original_resolution.nc, averaged here into six-hour windows and model depth
+bins, rather than the existing *_6hrstats.nc means.
+
+Shared input data:
+https://drive.google.com/drive/folders/1MJ9wrgEqYmXIEWtJ25PRUQ3-RaIrC-T9?usp=drive_link
+Input data and numerical caches are not included in this repository.
 
 OUTPUTS
     figures/: publication figures and captions

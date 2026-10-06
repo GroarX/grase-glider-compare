@@ -1,6 +1,6 @@
 # grase-glider-compare
 
-Compare GrASE/NoGrASE hindcasts or forecasts, or reference products such as ESPC and GLORYS, with one or more glider missions. Outputs include matched caches and 300-dpi T–S diagrams, profiles with standard deviations, sections, differences, histograms and vertical NRMSD.
+Compare supplied model outputs with one or more glider missions. Supports GrASE/NoGrASE pairs and reference products such as ESPC and GLORYS. Outputs include matched caches and 300-dpi T–S diagrams, profiles with standard deviations, sections, differences, histograms and vertical NRMSD.
 
 ## Install
 
@@ -37,7 +37,9 @@ Model inputs require temperature in °C, practical salinity, physical depth in m
 grase-glider-compare run --config examples/hycom_yucatan/config.json --output results/hycom_yucatan
 ```
 
-Supply the same model and glider files to reproduce it. Input data and numerical caches are not included.
+All supplied comparison results use `*_original_resolution.nc` glider observations, averaged into six-hour windows and model depth bins by this package. They do not use the existing `*_6hrstats.nc` means.
+
+[Data share](https://drive.google.com/drive/folders/1MJ9wrgEqYmXIEWtJ25PRUQ3-RaIrC-T9?usp=drive_link). Supply the same model and glider files and update their paths to reproduce the example. Data and numerical caches are not included in this repository.
 
 For an existing run, replace `run` with `plot` to redraw its figures. Use a new output folder when inputs or scientific settings change.
 

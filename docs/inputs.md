@@ -10,17 +10,19 @@ Use a separable latitude/longitude grid and one-dimensional physical depth in me
 
 Temperature must be °C. Set `temperature_kind` to `potential_0dbar` or `in_situ`; other temperature definitions require conversion. Salinity must be practical salinity. Confirm units and definitions from the exact input product.
 
-## Forecasts
+## Forecast time format
 
-A forecast with decoded valid UTC uses `model_pair.example.json` directly. If time is stored as initialization plus lead, use `forecast_pair.example.json` and map `init_coordinate`, `lead_coordinate` and `lead_units`. Select the same initialization for GrASE and NoGrASE. Run each cycle in a separate output folder, using glider observations that overlap its valid dates.
+Decoded valid UTC uses `model_pair.example.json` directly. For initialization plus lead time, use `forecast_pair.example.json` and map `init_coordinate`, `lead_coordinate` and `lead_units`. Select the same initialization for GrASE and NoGrASE and compare each cycle in a separate output folder.
 
 ## ESPC and GLORYS
 
 Use `external_models.example.json` with `variant: "reference"` and IDs such as `ESPC_reference` or `GLORYS_reference`. The example maps ESPC `water_temp`/`salinity` and GLORYS `thetao`/`so`; check actual coordinate names and temperature definitions. Both templates assume potential temperature at 0 dbar.
 
-Reference products receive their own comparison panels. Paired GrASE/NoGrASE error histograms are produced only when both variants are supplied. GLORYS12 is a reanalysis; use an appropriate forecast product for future dates.
+Reference products receive their own comparison panels. Paired GrASE/NoGrASE error histograms are produced only when both variants are supplied. Select reference-product dates that overlap the glider observations.
 
 ## Glider data and groups
+
+All supplied comparison results use `*_original_resolution.nc` QC-processed observations. The package recomputes their six-hour averages on each model's depth bins; it does not use the existing `*_6hrstats.nc` means for these results. [Shared input data](https://drive.google.com/drive/folders/1MJ9wrgEqYmXIEWtJ25PRUQ3-RaIrC-T9?usp=drive_link).
 
 Original-resolution inputs require sample-aligned `time`, `depth`, `temperature`, `salinity`, `lat` and `lon`; alternate names can be mapped under `variables`. Temperature is in-situ °C and depth is positive downward.
 

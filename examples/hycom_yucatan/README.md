@@ -7,7 +7,7 @@ A complete comparison of HYCOM-FSU GrASE and NoGrASE with all four Yucatan-side 
 - `sg650_20250817`
 - `sg651_20250901`
 
-The run includes eight model–mission pairs, each mission separately and the pooled `yucatan_side` group. It uses the original-resolution QC-processed observations, six-hour UTC windows and native HYCOM depth bins. GrASE-assimilated observations are assimilation diagnostics rather than independent validation.
+The run includes eight model–mission pairs, each mission separately and the pooled `yucatan_side` group. All results use QC-processed `*_original_resolution.nc` observations, averaged here into six-hour UTC windows and native HYCOM depth bins. The existing `*_6hrstats.nc` means are not used. GrASE-assimilated observations are assimilation diagnostics rather than independent validation.
 
 From the repository root, edit input paths in `config.json` and run:
 
@@ -15,7 +15,7 @@ From the repository root, edit input paths in `config.json` and run:
 grase-glider-compare run --config examples/hycom_yucatan/config.json --output results/hycom_yucatan
 ```
 
-The configured `../../data/` paths resolve to the repository's `data/` folder. Obtain the same model and glider inputs to reproduce the figures. Large input files and numerical caches are not included.
+The configured `../../data/` paths resolve to the repository's `data/` folder. [Data share](https://drive.google.com/drive/folders/1MJ9wrgEqYmXIEWtJ25PRUQ3-RaIrC-T9?usp=drive_link). Update paths to your copies of the same model and glider files to reproduce the figures. Large input files and numerical caches are not included.
 
 Differences are model minus glider. Profile shading is mean ± 1 standard deviation. Density is σ₀. The min–max NRMSD bounds are calculated from these eight HYCOM–Yucatan comparisons only.
 
