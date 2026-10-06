@@ -44,3 +44,9 @@ All supplied comparison results use `*_original_resolution.nc` glider observatio
 For an existing run, replace `run` with `plot` to redraw its figures. Use a new output folder when inputs or scientific settings change.
 
 Differences are model minus glider. Density is σ₀. Group statistics pool paired samples. See [METHODS.md](METHODS.md) for definitions and [README.txt](README.txt) for plain-text instructions.
+
+## Cite
+
+Ge, X. (2026). grase-glider-compare (v1.2.0). Zenodo. https://doi.org/10.5281/zenodo.23194558
+
+License: MIT.

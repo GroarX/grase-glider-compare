@@ -52,3 +52,9 @@ Replace run with plot to redraw existing caches. Use a new output folder after
 changing inputs or scientific settings. Differences are model minus glider;
 density is sigma0. Profiles show mean +/-1 standard deviation. Group statistics
 pool paired samples. METHODS.md defines averaging and NRMSD.
+
+CITE
+Ge, X. (2026). grase-glider-compare (v1.2.0). Zenodo.
+https://doi.org/10.5281/zenodo.23194558
+
+License: MIT.
